@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Survey Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <div class="header">
+            <h1 id="title">Survey Form</h1>
+            <p id="description">Please fill out the form below.</p>
+        </div>
+        <form id="survey-form">
+            <div class="field-group">
+                <label id="name-label" for="name">Name *</label>
+                <input type="text" class="inputs" id="name" name="name" required placeholder="Enter your name">
+            </div>
+            <div class="field-group">
+                <label id="email-label" for="email">Email *</label>
+                <input type="email" class="inputs" id="email" name="email" required placeholder="Enter your Email">
+            </div>
+            <div class="field-group">
+                <label id="number-label" for="age">Age</label>
+                <input type="number" class="inputs" id="number" min="18" max="95" name="age" placeholder="Enter your age">
+            </div>
+            <div class="field-group">
+                <label id="role-label" for="role">What is your current role? </label>
+                <select id="dropdown" name="role">
+                    <option selected disabled>Select your role</option>
+                    <option value="1">CEO</option>
+                    <option value="2">Manager</option>
+                    <option value="3">Intern</option>
+                </select>
+            </div>
+            <div class="field-group">
+                <label id="refer-label">Would you recommend us to a friend?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="refer" value="1">Sure</label>
+                    <label><input type="radio" name="refer" value="2">Maybe</label>
+                    <label><input type="radio" name="refer" value="3">No</label>
+                </div>
+            </div>
+            <div class="field-group">
+                <label id="suggestion-label">Where can we improve? </label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="conf-rooms" value="1">Conference Rooms</label>
+                    <label><input type="checkbox" name="workplace" value="2">Workplace</label>
+                    <label><input type="checkbox" name="air-quality" value="3">Air Quality</label>
+                </div>
+            </div>
+            <div class="field-group">
+                <label id="message-label" for="message">Additional Comments:</label>
+                <textarea id="message" rows="3" cols="35" placeholder="Write your message..."></textarea>
+            </div>
+            <input type="submit" id="submit" value="Submit">
+        </form>
+    </main>
+</body>
+</html>
