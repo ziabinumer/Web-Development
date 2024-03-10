@@ -1,0 +1,347 @@
+
+/* general styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --rwidth: 85%;
+    --bradius: 4px;
+}
+body {
+    height: 885px;
+    background-color: #E2E0D0; /*#E2E0D0*/
+    font-family: 'Roboto', sans-serif, Arial, Helvetica;
+}
+
+button {
+    margin-top: 5px;
+    padding: 12px 5rem;
+    background-color: blueviolet;
+    color: whitesmoke;
+    border: none;
+    border-radius: var(--bradius);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(138, 43, 226, .8);
+    transition: .5s;
+}
+
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Header Styles */
+#header { 
+    
+    height: 85px;
+    background-color: #032a53;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    color: white;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header-img {
+    width: 300px;
+    padding: 16px 4px 0 18px;
+}
+
+#nav-bar {
+    flex: 1;
+}
+
+.nav-menu {
+    padding-right: 28px;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.nav-link {
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+} 
+
+section {
+    border-bottom: 1px solid black;
+    border-radius: 4px;
+}
+
+#Compatibility {
+    border: 0;
+}
+
+#Buy {
+    border: 0;
+}
+
+/* Hero Section Styles */
+#Products {
+    min-height: 545px;
+    /*background: rgba(0, 0, 0, 0.4) url('https://cdn.thewirecutter.com/wp-content/media/2023/08/powerbanks-2048px-1508-2x1-1.jpg?auto=webp&quality=75&crop=2:1&width=980&dpr=1.5');
+    background-blend-mode: darken;
+    background-position: center;
+    background-repeat: no-repeat;
+    */
+    background-color: inherit;
+    margin: 0;
+    margin-top: 75px;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+
+}
+
+.product-container{
+    margin: 38px 12px 12px 12px;
+    text-align: left;
+    width: 275px;
+    height: 380px;
+    max-height: 450px;
+    
+    background-color: rgba(255, 255, 255, 0.8);
+    line-height: 1.4;
+    border-radius: var(--bradius);
+}
+
+.pi-container {
+    width: 100%;
+    height: 115px;
+    background-color: rgba(255, 255, 255, .9);
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+
+.product-img {
+    width: 50%;
+    height: 90%;
+}
+
+
+.product-detail {
+    padding: 16px 12px 12px 20px;
+}
+
+.product-name {
+    min-height: 60px;
+    font-size: 20px;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 500;
+
+}
+
+.product-name:hover {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.product-tagline {
+    line-height: 1.2;
+    margin: 5px 0px 15px 0px;
+}
+
+.product-price {
+    padding: 12px 0;
+}
+
+.product-price span {
+    font-weight: bold;
+}
+
+/* Content Sections Styling */
+
+section {
+    margin-top: 15px;
+    padding: 35px;
+    width: inherit;
+    background-color: inherit;
+}
+
+/* Features Section Styling */
+
+#Features {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+}
+.Img-Container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Features-Container {
+    flex: 3;
+    max-width: 800px;
+    margin: auto;
+    padding-left: 45px;
+}
+
+#Features ul li {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    padding: 18px 25px;
+}
+
+#Features ul li i {
+    font-size: 28px;
+    margin-right: 18px;
+}
+
+#Features ul li b {
+    font-size: 22px;
+    display: block;
+    padding-bottom: 12px;
+}
+
+
+/* Comaptibility Section Styling */
+#Compatibility {
+    text-align: center;
+    max-width: 100%;
+}
+
+#Compatibility * {
+    padding: 12px;
+}
+
+#Compatibility h1 {
+    font-size: 32px;
+    padding-bottom: 6px;
+}
+
+.dev-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: center;
+}
+
+.dev-container .device {
+    margin-top: 15px;
+    padding: 24px;
+    height: 215px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background-blend-mode: darken;
+    background-position: center;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    font-size: 24px;
+}
+
+.smartphone {
+    background: rgba(0,0,0, .6) url('https://i.ibb.co/M1N5MxQ/smartphone.jpg');
+    
+}
+
+.laptop {
+    background: rgba(0,0,0, .6) url('https://i.ibb.co/twfkdjK/laptop.jpg');
+}
+
+.wearable {
+    background: rgba(0,0,0, .6) url('https://i.ibb.co/LYQB1j6/wearable.jpg');
+}
+
+.console {
+    background: rgba(0,0,0, .6) url('https://i.ibb.co/Bc0Hf2n/console.jpg');
+}
+
+/* Buy Section */
+#Buy {
+    width: 100%;
+    text-align: center;
+}
+
+#Buy h1 {
+    font-size: 32px;
+    padding: 6px;
+}
+
+input {
+    margin: 10px 0;
+    padding: 8px 16px;
+    width: 295px;
+}
+
+input[type='submit'] {
+    width: auto;
+}
+
+/* Footer */
+#Footer {
+    margin-top: 15px;
+    width: 100%;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+
+
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 975px) {
+    #Features {
+        flex-direction: column;
+    }
+
+    .Features-Container {
+        padding: 2px;
+    }
+
+    iframe {
+        width: 85%;
+        max-height: 355px;
+        padding: 16px 2px;
+    }
+    
+}
+@media screen and (max-width:780px) {
+    #header {
+        justify-content: center;
+    }
+    #nav-bar {
+        display: none;
+    }
+    .product-container {
+        width: 300px;
+    }
+}
