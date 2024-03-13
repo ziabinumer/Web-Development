@@ -1,0 +1,287 @@
+/* General Styles */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --dtsize: 4rem;
+    --shsize: 3rem;
+    --nfsize: 1.8rem;
+    --fsize: 17px;
+    --color: #ffffEE;
+    --font-familiy-Sans: sans-serif, 'Arial';
+    --font-family-Med: 'Madimi One', sans-serif;
+    --font-family-Rale: 'Raleway', 'Madimi One', sans-serif;
+}
+
+body {
+    background-color: #0A2239;
+    font-family: var(--font-family-Rale);
+    color: var(--color);
+    font-size: var(--fsize);
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color);
+}
+
+
+
+
+/* Special Right Side Navigation Design */
+
+.navigation-dcontainer {
+    width: 45px;
+}
+
+.navigation-design {
+    width: 16px;
+    margin: 0 auto; 
+}
+
+.circle {
+    width: 15px;
+    height: 15px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.filled-circle {
+    background-color: red;
+    border-color: red;
+}
+.vl {
+    width: 1px;
+    height: 25px;
+    border-left: 1px solid white;
+    margin: auto;
+
+}
+
+/* section styles */
+
+#navbar {
+    height: 75px;
+    width: 100%;
+    padding:5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: #0A2239;
+}
+#navbar-2{
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+    list-style: none; 
+}
+
+#nav-link {
+    font-family: var(--font-familiy-Sans);
+    font-size: var(--fsize);
+}
+
+section {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 25px;
+    min-height: 630px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    text-align: center;
+}
+
+.sp-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+#section-content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 34px;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+#section-heading {
+    font-size: var(--shsize);
+    padding: 16px 0;
+    width: 100%;
+}
+
+.left-section {
+    flex: 1;
+}
+
+.right-section {
+    width: 25%;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+/* Welcome Section */
+#dev-title {
+    font-size: var(--dtsize);
+    font-family: var(--font-family-Rale);
+    font-weight: 700;
+}
+
+#dev-skill {
+    color: #be3144;
+    font-size: var(--nfsize);
+    font-family: var(--font-familiy-Sans);
+    font-weight: 5;
+    font-style: italic;
+    padding-top: 6px;
+    padding-left: 12px;
+}
+
+/* Skills Section */
+
+
+
+
+.bars h1 {
+    padding: 18px 6px;
+    text-align: left;
+}
+
+.skill {
+    padding: 8px;
+    width: 75%;
+    margin: auto;
+}
+
+.skill-bar {
+    display: flex;
+    text-align: right;
+}
+
+#skill-name {
+    width: 100%;
+    text-align: left;
+}
+
+.bg-html {
+    width: 87%;
+    background-color: green;
+    padding-right: 8px;
+}
+
+.bg-css {
+    width: 77%;
+    background-color: rgb(33, 150, 243);
+    padding-right: 8px;
+}
+
+.bg-js {
+    width: 62%;
+    background-color: red;
+    padding-right: 8px;
+}
+
+.bg-python {
+    width: 40%;
+    background-color: blueviolet;
+    padding-right: 8px;
+}
+
+.f-right {
+    flex: 1;
+    background-color: lightgray;
+}
+
+/* Projects Section */
+.projects-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+.project-card {
+    box-sizing: border-box;
+    width: 345px;
+    height: 295px;
+    background-color: #303841;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 6px;
+    text-align: center;
+}
+
+.project-img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+
+.project-title {
+    padding: 12px 0;
+    font-size: var(--nfsize);
+    width: 100%;
+}
+
+/* Contact Section */
+.social-container {
+    padding: 26px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.link-div {
+    width: 29%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 12px;
+    font-size: 22px;
+    padding: 12px;
+}
+
+
+footer {
+    height: 65px;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 768px) {
+    .right-section {
+        display: none;
+    }
+    .social-container {
+        padding: 4px;
+    }
+    .social-links {
+        margin-left: 1rem;
+    }
+    .link-div {
+        width: 100%;
+        justify-content: center;
+    }
+    
+}
