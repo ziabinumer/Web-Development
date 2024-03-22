@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Role Playing Game</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div id="gameContainer">
+        <!-- statsBar start -->
+        <div id="statsBar" class="bar">
+            <div class="statContainer">
+                <span>XP: </span>
+                <span id="xpText" class="boldSpan"></span>
+            </div>
+            <div class="statContainer">
+                <span>Health: </span>
+                <span id="healthText" class="boldSpan"></span>
+            </div>
+            <div class="statContainer">
+                <span>Gold: </span>
+                <span id="goldText" class="boldSpan"></span>
+            </div>
+        </div>
+        <!-- statsBar End -->
+
+        <!-- actionsBar start -->
+        <div id="actionBar" class="bar">
+            <button id="btn1">Go to store</button>
+            <button id="btn2">Go to cave</button>
+            <button id="btn3">Fight dragon</button>
+        </div>
+        <!-- actionsBar end -->
+        <!-- monsterBar -->
+            <div id="monsterBar" class="bar">
+                <div class="statContainer">
+                    <span>Monster Name: </span>
+                    <span id="monsterNameText" class="boldSpan"></span>
+                </div>
+                <div class="statContainer">
+                    <span>Health: </span>
+                    <span id="monsterHealthText" class="boldSpan"></span>
+                </div>
+            </div>
+        <!-- monsterBar end-->
+        <!-- messageBar start -->
+        <div id="messageBar" class="bar">
+            <span id="message">
+                Welcome to Dragon Repeller. 
+                You must defeat the dragon that is preventing people from leaving the town. 
+                You are in the town square.  Where do you want to go? Use the buttons above.
+            </span>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>
