@@ -21,6 +21,7 @@ let initPiecePosition = {
     "♛": ["d1", "d8"]
 }
 
+
 const colLabel = ["a", "b", "c", "d", "e", "f", "g", "h"]
 
 // basic layout of the board
@@ -36,8 +37,7 @@ function createBoard() {
             // create square element
             let currentSquare = document.createElement("div");
             currentSquare.id = colLabel[j] + (8 - i);
-            currentSquare.className = "square";
-            
+            currentSquare.classList = ["square available"]
             // set square color
             if (i % 2 == 0) {
                 currentSquare.style.backgroundColor = j % 2 == 0 ? "white" : "black"; 
@@ -63,13 +63,28 @@ function assignBoard() {
     console.log(initPiecePosition)
     for (const [key, value] of Object.entries(initPiecePosition)) {
         for (let p of value) {
-            document.querySelector("#" + p).innerText = key;
+            let sq = document.querySelector("#" + p);
+            sq.innerText = key;
+            sq.title = key;
+            
+            sq.classList = ["square notAvailable"]
         }
-        
     }
     
 }
 function move() {
     // implement move function
+    
+    if (this.title == "♟️") {
+        let nextSquare = Array.from(this.id)[0] + (Number(Array.from(this.id)[1]) + 1);
+        nextSquare = document.querySelector("#" + nextSquare);
+        if (nextSquare.classList.contains("available")) {
+            nextSquare.innerText = "♟️";
+            this.innerText = "";
+            this.classList = ["square available"];
+            nextSquare.classList = ["square notAvailable"]
+        }
+    
+}
 }
 document.addEventListener('DOMContentLoaded', createBoard);
