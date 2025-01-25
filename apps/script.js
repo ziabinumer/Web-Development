@@ -8,6 +8,7 @@ function addItem(title, description) {
     // create list item
     let item = document.createElement("li");
     item.className = "item";
+    item.id = "item" + document.querySelectorAll(".item").length
 
     // create title and description
     let itemTitle = document.createElement("p");
@@ -21,6 +22,9 @@ function addItem(title, description) {
     // append to item
     item.appendChild(itemTitle);
     item.appendChild(itemDescription);
+    
+
+    item.addEventListener("click", removeItem)
 
     // append item to list
     list.appendChild(item);
@@ -28,7 +32,12 @@ function addItem(title, description) {
     // reset input
     title.value = "";
     description.value = "";
-    alert('s')
+    
+}
+
+function removeItem() {
+    let list = document.querySelector("#list");
+    list.removeChild(document.querySelector("#" + this.id))
 }
 
 document.querySelector("#submitButton").addEventListener("click", function() {
