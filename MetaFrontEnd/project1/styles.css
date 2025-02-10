@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    padding: 9px 18px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logo {
+    height: 85px;
+    width: 55px;
+}
+.bottom {
+    width: 88%;
+    padding: 15px;
+    background-color: saddlebrown;
+    margin-top: 15px;
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+}
+.menu li {
+    padding: 0 18px;
+}
+.menu a {
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    color: black;
+}
+
+main {
+    max-width: 86%;
+    margin: 0 auto;
+}
+/* Banner Design */
+#banner {
+    background-image: url(res/bg.webp);
+    min-height: 250px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-blend-mode: black;
+}
+.content {
+    text-align: center;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, .6)
+}
+
+#banner h2 {
+    font-size: 35px;
+    padding: 6px;
+}
+#banner p {
+    padding: 6px;
+}
+#banner button {
+    margin-top: 8px;
+    padding: 8px 25px;
+}

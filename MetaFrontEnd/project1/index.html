@@ -11,8 +11,11 @@
     </head>
     <body>
         <header>
-            <img src="res/Asset 1@3x.png" alt="Lucky Shrub" id="logo">
-            <nav>
+            <div class="top">
+                <img src="res/Asset 1@3x.png" alt="Lucky Shrub" id="logo">
+            </div>
+            
+            <nav class="bottom">
                 <ul class="menu">
                     <li class="item active">
                         <a href="/">Home</a>
@@ -27,13 +30,28 @@
             </nav>
         </header>
         <main>
-            <div id="hero"></div>
-            <div id="about"></div>
-            <div id="services"></div>
-            <div id="contact"></div>
+            <div id="banner">
+                <div class="content">
+                    <h2>30% Spring Discount</h2>
+                    <p>
+                        We are offering flat 30% Spring discount on all our products.
+                    </p>
+                    <button onclick="alert('buy')">
+                        Buy Now
+                    </button>
+                </div>
+            </div>
+            <div id="cols">
+                <div id="col">
+                    <h2>Heading 1</h2>
+                    <img src="">
+                    <p></p>
+                </div>
+            </div>
         </main>
         <footer>
-            Copyright @LuckyShrub
+            <div id="clientLogo"></div>
+            <div id="copyright"></div>
         </footer>
     </body>
 </html>
