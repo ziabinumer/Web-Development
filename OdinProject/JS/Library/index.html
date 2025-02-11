@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Library</title>
+
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Library</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#" id="nav1">Books</a>
+                    </li>
+                    <li>
+                        <a href="#" id="nav2">Add Book</a>
+                    </li>
+                    <li>
+                        <a href="#" id="nav3">Remove Book</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div id="BooksCatalogue">
+                <ul id="booksList"></ul>
+            </div>
+            <div id="AddBook">
+                <form id="AddBookForm">
+                    <input type="name" placeholder="Enter name of the book" id="name" required>
+                    <input type="name" placeholder="Enter author name" id="authorName" required>
+                    <input type="number" placeholder="Enter number of pages" id="pages" required>
+                    <input type="number" placeholder="Enter publishing year" id="year" required>
+                    <input type="submit" id="AddBtn">
+                </form>
+            </div>
+            <div id="RemoveBook">
+                <form id="RemoveBookForm">
+                    <input type="name" placeholder="Enter name of the book to remove. Exact Name" id="nameR">
+                    <input type="submit" id="removeBtn">
+                </form>
+            </div>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>
