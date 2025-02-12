@@ -1,28 +1,78 @@
+const list = document.querySelector("#bookList");
+
 const Library = []
 
-function Book(name, author, pages, yearPublished) {
+function Book(id, name, author, pages, yearPublished, isAvailable) {
+    this.id = id
     this.name = name
     this.author = author
     this.pages = pages;
     this.yearPublished = yearPublished
+    this.available = isAvailable;
 }
 
 function addBookToLibrary(event) {
     event.preventDefault();
-    const name = document.querySelector("#name").value;
+    const name = document.querySelector("#name");
     for (let book of Library) {
-        if (book.name == name) {
+        if (book.name == name.value) {
             alert("Already exists");
             return;
         }
     }
-    const author = document.querySelector("#authorName").value;
-    const pages = document.querySelector("#pages").value;
-    const year = document.querySelector("#year").value;
+    const author = document.querySelector("#authorName");
+    const pages = document.querySelector("#pages");
+    const year = document.querySelector("#year");
 
-    Library.push(new Book(name, author, pages, year))
-    console.log(Library)
+    const newBook = new Book(Library.length, name.value, author.value, pages.value, year.value, true);
+
+    Library.push(newBook);
+
+    updateCatalogue(newBook);
     
+    // clear input fields
+    name.value = "";
+    author.value = "";
+    pages.value = null;
+    year.value = null;
+    
+}
+
+function updateCatalogue(newBook) {
+    let li = document.createElement("li");
+    li.id = "b" + newBook.id
+
+    let p = document.createElement("p");
+    p.innerHTML = `
+        <b>Name</b>: ${newBook.name}<br>
+        <b>Author</b>: ${newBook.author}<br>
+        <b>Page Count</b>: ${newBook.pages}<br>
+        <b>Year Published</b>: ${newBook.yearPublished}
+    `;
+
+    
+    let btn = document.createElement("button");
+    btn.innerText = "Delete Book"
+    btn.addEventListener("click", () => {
+        let id = li.id;
+ 
+        list.removeChild(document.querySelector(`#${id}`))
+        
+        id = id.match(/(\d+)/)[0];
+        
+        for (let book of Library) {
+            if (book.id == id) {
+                book.available = false;
+                
+            }
+        }
+    })
+    
+    li.appendChild(p);
+    li.appendChild(btn);
+
+    list.appendChild(li);
+    return
 }
 
 function removeBook(event) {
@@ -32,20 +82,6 @@ function removeBook(event) {
 
 /* handle form */
 const addBookForm = document.querySelector("#AddBookForm");
-const removeBookForm = document.querySelector("#RemoveBookForm");
-
 
 addBookForm.addEventListener("submit", addBookToLibrary);
-removeBookForm.addEventListener("submit", removeBook)
 
-/* handle nav clicks */
-document.querySelector("#nav1").addEventListener("click", (event) => {
-    event.preventDefault();
-    
-})
-
-document.querySelector("#nav2").addEventListener("click", (event) => {
-    event.preventDefault();
-    document.querySelector("#BooksCatalogue").style.display = "none";
-    document.querySelector("#AddBook").style.display = "block";
-})
